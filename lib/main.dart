@@ -14,9 +14,9 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
  
-        primaryColor: Colors.transparent,
+        primaryColor: Colors.white,
         visualDensity: VisualDensity.adaptivePlatformDensity),
-      home: NavigationContainer(),
+      home: const NavigationContainer(),
     );
   }
 }

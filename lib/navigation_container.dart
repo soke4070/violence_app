@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:green_app/pages/explore_page.dart';
 import 'package:green_app/pages/notification_page.dart';
 import 'package:green_app/pages/profile_page.dart';
-import 'package:green_app/pages/peace_page.dart';
 import 'package:green_app/pages/violence_page.dart';
+
 import 'package:green_app/widgets/custom_bottom_nav_bar.dart';
 
 class NavigationContainer extends StatefulWidget {
@@ -16,7 +16,6 @@ class NavigationContainer extends StatefulWidget {
 class _NavigationContainerState extends State<NavigationContainer> {
   int _selectedPageIndex = 0;
   static const List<Widget> _appPages = [
-    PeacePage(),
     ViolencePage(),
     ExplorePage(),
     NotificationPage(),

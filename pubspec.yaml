@@ -38,6 +38,9 @@ dependencies:
   cupertino_icons: ^1.0.2
 
   font_awesome_flutter: ^8.10.0
+  google_fonts: ^3.0.1
+  expandable_text: ^2.3.0
+  marquee: ^2.2.3
 
 dev_dependencies:
   flutter_test:
