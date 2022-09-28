@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:green_app/pages/explore_page.dart';
 import 'package:green_app/pages/notification_page.dart';
 import 'package:green_app/pages/profile_page.dart';
+import 'package:green_app/pages/upload_page.dart';
 import 'package:green_app/pages/violence_page.dart';
 
 import 'package:green_app/widgets/custom_bottom_nav_bar.dart';
@@ -18,6 +19,7 @@ class _NavigationContainerState extends State<NavigationContainer> {
   static const List<Widget> _appPages = [
     ViolencePage(),
     ExplorePage(),
+    UploadPage(),
     NotificationPage(),
     ProfilePage(),
   ];

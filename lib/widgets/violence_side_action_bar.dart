@@ -6,7 +6,7 @@ import 'package:green_app/models/violence.dart';
 
 class ViolenceSideActionBar extends StatelessWidget {
   const ViolenceSideActionBar({super.key, required this.violence});
-  final double _iconSize = 40;
+  final double _iconSize = 45;
   final Violence violence;
   @override
   Widget build(BuildContext context) {
