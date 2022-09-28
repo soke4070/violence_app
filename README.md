@@ -1,6 +1,6 @@
 # green_app
 
-A new Flutter project.
+Green App is a Social App for promoting Peace and Violence
 
 ## Getting Started
 
