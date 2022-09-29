@@ -20,9 +20,9 @@ class CustomProfileAppBar extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(3.0),
             child: Icon(
-              Icons.https_outlined,
+              Icons.local_fire_department, 
               size: 18,
-              color: Colors.black,
+              color: Colors.red,
             ),
           ),
           Text(

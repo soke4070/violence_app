@@ -10,15 +10,41 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 2,
-      child: NestedScrollView(headerSliverBuilder: (context, index) {
-        return [
-          CustomProfileAppBar(),
-          SliverToBoxAdapter(child: ProfileHeader(),)
-        ];
-      },
-      body: Text("hello"),
-      ),
+      length: 1,
+      child: NestedScrollView(
+          headerSliverBuilder: (context, index) {
+            return [
+              CustomProfileAppBar(),
+              SliverToBoxAdapter(
+                child: Container(
+                  color: Colors.white,
+                  child: ProfileHeader(),
+                ),
+              )
+              
+            ];
+          },
+          body: TabBarView(children: [
+            CustomScrollView(
+              physics: ClampingScrollPhysics(),
+              slivers: [
+                SliverGrid(
+                  delegate: SliverChildBuilderDelegate((context, index) {
+                    return Container(
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: NetworkImage(
+                              'https://c.tenor.com/rCY3koHdiTwAAAAM/ok-hand-pepe.gif'),
+                        ),
+                      ),
+                    );
+                  }, childCount: 15),
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 3),
+                )
+              ],
+            ),
+          ])),
     );
   }
 }
