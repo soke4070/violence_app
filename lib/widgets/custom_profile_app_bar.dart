@@ -26,7 +26,7 @@ class CustomProfileAppBar extends StatelessWidget {
             ),
           ),
           Text(
-            "comradesoke",
+            "comradevawulence",
             style: TextStyle(
                 fontSize: 24, fontWeight: FontWeight.bold, color: Colors.black),
           )
