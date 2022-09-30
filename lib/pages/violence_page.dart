@@ -18,7 +18,7 @@ class ViolencePage extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
         centerTitle: false,
-        title: Text("Violence🔥",
+        title: Text("Vawulence🔥",
             style: GoogleFonts.satisfy(
               fontSize: 25,
               fontWeight: FontWeight.bold,
