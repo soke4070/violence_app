@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:green_app/navigation_container.dart';
+import 'package:green_app/views/screens_auth/login_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
  
         primaryColor: Colors.white,
         visualDensity: VisualDensity.adaptivePlatformDensity),
-      home: const NavigationContainer(),
+      home: const LoginPage(),
     );
   }
 }
