@@ -1,4 +1,4 @@
-import 'package:green_app/models/user.dart';
+import 'package:violence_app/models/user.dart';
 
 class Violence {
   final String postedBy;

@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 
-import '../_mock_data/mock.dart';
+
 
 class CustomBottomNavigationBar extends StatelessWidget {
   const CustomBottomNavigationBar(
@@ -60,8 +60,7 @@ class CustomBottomNavigationBar extends StatelessWidget {
               child: CircleAvatar(
                 backgroundColor: Colors.white,
                 radius: _iconSize / 2,
-                backgroundImage: NetworkImage(currentUser.profileImageUrl),
-              ),
+            )
             )
           ],
         ),

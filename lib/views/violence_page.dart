@@ -2,13 +2,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:green_app/_mock_data/mock.dart';
-import 'package:green_app/widgets/violence_details.dart';
-import 'package:green_app/widgets/violence_side_action_bar.dart';
+import 'package:violence_app/widgets/violence_details.dart';
+import 'package:violence_app/widgets/violence_side_action_bar.dart';
 
 class ViolencePage extends StatelessWidget {
-  const ViolencePage({super.key});
-  
+  var violence;
 
   @override
   Widget build(BuildContext context) {
@@ -30,15 +28,13 @@ class ViolencePage extends StatelessWidget {
       ),
       body: PageView.builder(
           scrollDirection: Axis.vertical,
-          itemCount: violence.length,
           itemBuilder: (context, index) {
             return Container(
               decoration: BoxDecoration(
                   border: Border.all(color: Colors.black),
                   image: DecorationImage(
                       fit: BoxFit.cover,
-                      image: NetworkImage(
-                          violence[index].imageUrl))),
+                      image: NetworkImage(violence[index].imageUrl))),
               child: Center(
                   child: Stack(
                 children: [
@@ -58,15 +54,18 @@ class ViolencePage extends StatelessWidget {
                     children: [
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.end,
-                    
                         children: [
                           Flexible(
                             flex: 11,
-                            child: ViolenceDetails(violence: violence[index],),
+                            child: ViolenceDetails(
+                              violence: violence[index],
+                            ),
                           ),
                           Flexible(
                             flex: 2,
-                            child: ViolenceSideActionBar(violence: violence[index],),
+                            child: ViolenceSideActionBar(
+                              violence: violence[index],
+                            ),
                           ),
                         ],
                       )

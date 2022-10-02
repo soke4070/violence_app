@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "420470228971",
+    "project_id": "violence-app",
+    "storage_bucket": "violence-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:420470228971:android:55c81485488c406eadfbae",
+        "android_client_info": {
+          "package_name": "com.example.violence_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "420470228971-aqhfvos1huej0c5jkippmaa7es29vvl4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwhQ9RHmQSgk1DrSv9ut1-aVtMPmCmUPI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "420470228971-aqhfvos1huej0c5jkippmaa7es29vvl4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:green_app/widgets/profile_label_count_widget.dart';
+import 'package:violence_app/widgets/profile_label_count_widget.dart';
 
 import 'add_story_card_profile.dart';
 

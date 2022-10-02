@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 
-import 'package:green_app/_mock_data/mock.dart';
+
 
 class AddStoryCardProfile extends StatelessWidget {
   const AddStoryCardProfile({super.key});
@@ -14,7 +14,6 @@ class AddStoryCardProfile extends StatelessWidget {
         CircleAvatar(
           backgroundColor: Colors.pink,
           radius: 45,
-          backgroundImage: NetworkImage(currentUser.profileImageUrl),
         ),
         Positioned(
           top: 65,
@@ -23,9 +22,8 @@ class AddStoryCardProfile extends StatelessWidget {
             height: 25,
             width: 25,
             decoration: BoxDecoration(
-              border: Border.all(
-                color: Colors.white, width: 3
-              ), borderRadius: BorderRadius.circular(15),
+              border: Border.all(color: Colors.white, width: 3),
+              borderRadius: BorderRadius.circular(15),
               color: Colors.blue,
             ),
             child: IconButton(
@@ -34,7 +32,6 @@ class AddStoryCardProfile extends StatelessWidget {
               icon: Icon(Icons.add),
               iconSize: 20,
               color: Colors.white,
-            
             ),
           ),
         )

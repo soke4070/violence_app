@@ -1,8 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:green_app/_mock_data/mock.dart';
-import 'package:green_app/models/violence.dart';
+import 'package:violence_app/models/violence.dart';
 
 class ViolenceSideActionBar extends StatelessWidget {
   const ViolenceSideActionBar({super.key, required this.violence});
@@ -15,9 +14,11 @@ class ViolenceSideActionBar extends StatelessWidget {
       children: [
         IconButton(
           onPressed: () => {},
-          icon: Icon(violence.isLiked ? Icons.local_fire_department: Icons.local_fire_department),
+          icon: Icon(violence.isLiked
+              ? Icons.local_fire_department
+              : Icons.local_fire_department),
           iconSize: _iconSize,
-          color:violence.isLiked ? Colors.red : Colors.white,
+          color: violence.isLiked ? Colors.red : Colors.white,
         ),
         Text(
           violence.totalLikes,

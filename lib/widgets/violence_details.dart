@@ -2,7 +2,7 @@
 
 import 'package:expandable_text/expandable_text.dart';
 import 'package:flutter/material.dart';
-import 'package:green_app/_mock_data/mock.dart';
+
 import 'package:marquee/marquee.dart';
 
 import '../models/violence.dart';

@@ -1,4 +1,4 @@
-package com.example.green_app
+package com.example.violence_app
 
 import io.flutter.embedding.android.FlutterActivity
 
