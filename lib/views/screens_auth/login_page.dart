@@ -49,7 +49,7 @@ class _LoginPageState extends State<LoginPage> {
                             color: Colors.white),
                       ),
                       const Text(
-                        'Sign into your violence🔥 account',
+                        'Sign into your vawulence🔥 account',
                         style: TextStyle(color: Colors.white),
                       ),
                       const SizedBox(height: 30.0),

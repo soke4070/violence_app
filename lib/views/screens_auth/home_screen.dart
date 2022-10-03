@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:violence_app/widgets/constants.dart';
-import 'package:violence_app/widgets/custom_icon.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);

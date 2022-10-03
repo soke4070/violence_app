@@ -1,29 +1,21 @@
 import 'dart:io';
-
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:get/get.dart';
-import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:violence_app/models/user.dart' as model;
-import 'package:violence_app/views/profile_page.dart';
 import 'package:violence_app/views/screens_auth/home_screen.dart';
 import 'package:violence_app/views/screens_auth/login_page.dart';
-import 'package:violence_app/views/violence_page.dart';
-
-import '../navigation_container.dart';
 import '../widgets/constants.dart';
 
 class AuthController extends GetxController {
   static AuthController instance = Get.find();
- late Rx<User?> _user;
+  late Rx<User?> _user;
   late Rx<File?> _pickedImage;
 
   File? get profilePhoto => _pickedImage.value;
 
-
-@override
+  @override
   void onReady() {
     super.onReady();
     _user = Rx<User?>(firebaseAuth.currentUser);
@@ -38,7 +30,6 @@ class AuthController extends GetxController {
       Get.offAll(() => const HomeScreen());
     }
   }
-
 
   void pickImage() async {
     final pickedImage =

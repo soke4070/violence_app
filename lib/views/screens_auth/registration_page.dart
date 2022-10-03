@@ -7,11 +7,6 @@ import 'package:violence_app/common/theme_helper.dart';
 import 'package:violence_app/controllers/auth_controller.dart';
 import 'package:violence_app/views/screens_auth/login_page.dart';
 import 'package:violence_app/widgets/header_widget.dart';
-
-import 'package:hexcolor/hexcolor.dart';
-
-import 'package:violence_app/views/profile_page.dart';
-
 import '../../widgets/constants.dart';
 
 class RegistrationPage extends StatefulWidget {
