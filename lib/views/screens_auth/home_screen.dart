@@ -39,7 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
           BottomNavigationBarItem(
             icon: ImageIcon(
               AssetImage('lib/icons/fire.png'),
-              size: 40,
+              size: 30,
             ),
             label: '',
           ),
