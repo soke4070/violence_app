@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../widgets/constants.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -28,12 +29,12 @@ class _HomeScreenState extends State<HomeScreen> {
           BottomNavigationBarItem(
             icon: const ImageIcon(
               AssetImage('lib/icons/danger.png'),
-              size: 40,
+              size: 30,
             ),
             label: '',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.travel_explore, size: 40),
+            icon: Icon(Icons.travel_explore, size: 30),
             label: '',
           ),
           BottomNavigationBarItem(
@@ -44,15 +45,16 @@ class _HomeScreenState extends State<HomeScreen> {
             label: '',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.notifications_active, size: 40),
+            icon: Icon(Icons.notifications_active, size: 30),
             label: '',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person, size: 40),
-            label: 'person',
+            icon: Icon(Icons.person, size: 30),
+            label: '',
           ),
         ],
       ),
+      body: pages[pageIdx],
     );
   }
 }
