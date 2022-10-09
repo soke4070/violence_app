@@ -10,12 +10,13 @@ import 'package:violence_app/views/screens_auth/home_screen.dart';
 import 'package:violence_app/views/screens_auth/login_page.dart';
 import 'package:violence_app/views/screens_auth/registration_page.dart';
 import 'package:violence_app/views/violence_page.dart';
+import 'package:violence_app/widgets/constants.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp().then(
     (value) {
-      Get.put(AuthController ());
+      Get.put(AuthController());
     },
   );
   runApp(const MyApp());
@@ -30,9 +31,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Violence App',
       theme: ThemeData(
-          primaryColor: Colors.white,
-          visualDensity: VisualDensity.adaptivePlatformDensity),
-      home:  const HomeScreen(),
+          scaffoldBackgroundColor: Colors.black,
+          colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.grey)),
+      home: LoginPage(),
     );
   }
 }

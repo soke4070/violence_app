@@ -1,8 +1,6 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-
 import '../../widgets/constants.dart';
 import 'confirm_screen.dart';
 
@@ -14,7 +12,8 @@ class AddVideoScreen extends StatelessWidget {
     if (video != null) {
       Navigator.of(context).push(
         MaterialPageRoute(
-          builder: (context) => ConfirmScreen(     videoFile: File(video.path),
+          builder: (context) => ConfirmScreen(
+            videoFile: File(video.path),
             videoPath: video.path,
           ),
         ),

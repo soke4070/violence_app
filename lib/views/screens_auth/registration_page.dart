@@ -32,13 +32,11 @@ class _RegistrationPageState extends State<RegistrationPage> {
       body: SingleChildScrollView(
         child: Stack(
           children: [
-            Container(
-              child: HeaderWidget(
-                150,
-                false,
-                Icons.local_fire_department,
-                color: Colors.red,
-              ),
+            HeaderWidget(
+              150,
+              false,
+              Icons.local_fire_department,
+              color: Colors.red,
             ),
             Container(
                 margin: EdgeInsets.fromLTRB(40, 70, 25, 10),
@@ -57,8 +55,9 @@ class _RegistrationPageState extends State<RegistrationPage> {
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(100),
                                   border:
-                                      Border.all(width: 5, color: Colors.red),
+                                      Border.all(width: 5, color: Colors.black),
                                   color: Colors.black,
+                                  // ignore: prefer_const_literals_to_create_immutables
                                   boxShadow: [
                                     BoxShadow(
                                       color: Colors.black12,
@@ -69,7 +68,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                                 ),
                                 child: Icon(
                                   Icons.local_fire_department,
-                                  color: Colors.red,
+                                  color: Colors.black,
                                   size: 80.0,
                                 ),
                               ),
@@ -176,7 +175,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                                     state.errorText ?? '',
                                     textAlign: TextAlign.left,
                                     style: TextStyle(
-                                      color: Theme.of(context).errorColor,
+                                      color: Colors.white,
                                       fontSize: 12,
                                     ),
                                   ),

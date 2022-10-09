@@ -22,11 +22,12 @@ class _HomeScreenState extends State<HomeScreen> {
         },
         type: BottomNavigationBarType.fixed,
         backgroundColor: Colors.black,
-        selectedItemColor: Colors.red,
+        selectedItemColor: Color.fromARGB(255, 255, 0, 76),
         unselectedItemColor: Colors.white,
         currentIndex: pageIdx,
         items: const [
           BottomNavigationBarItem(
+            // ignore: unnecessary_const
             icon: const ImageIcon(
               AssetImage('lib/icons/danger.png'),
               size: 30,

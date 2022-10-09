@@ -93,7 +93,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                                       .hasMatch(val)) {
                                     return "Enter a valid email address";
                                   }
-                                  return null;
+                                  
                                 },
                               ),
                               decoration:

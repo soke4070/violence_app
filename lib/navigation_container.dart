@@ -21,7 +21,7 @@ class _NavigationContainerState extends State<NavigationContainer> {
   // ignore: prefer_final_fields
   static  List<Widget> _appPages = [
     ViolencePage(),
-    ExplorePage(),
+
     UploadPage(),
     NotificationPage(),
     ProfilePage(),
