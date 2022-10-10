@@ -3,8 +3,6 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:violence_app/common/theme_helper.dart';
 import 'package:violence_app/widgets/constants.dart';
-import 'forgot_password_page.dart';
-import 'package:violence_app/views/profile_page.dart';
 import 'registration_page.dart';
 import 'package:violence_app/widgets/header_widget.dart';
 
@@ -83,14 +81,7 @@ class _LoginPageState extends State<LoginPage> {
                                     const EdgeInsets.fromLTRB(10, 0, 10, 20),
                                 alignment: Alignment.topRight,
                                 child: GestureDetector(
-                                  onTap: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              const ForgotPasswordPage()),
-                                    );
-                                  },
+                                  onTap: () {            },
                                   child: const Text(
                                     "Forgot your password?",
                                     style: TextStyle(
