@@ -113,7 +113,7 @@ class VideoScreen extends StatelessWidget {
                                     data.username,
                                     style: const TextStyle(
                                       fontSize: 20,
-                                      color: Color.fromARGB(206, 255, 29, 12),
+                                      color: Colors.white,
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),

@@ -1,9 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.violence_app">
+    package="lol.soke.violenceapp">
 
      <uses-permission android:name="android.permission.INTERNET"/>
    <application
-        android:label="violence_app"
+        android:label="Vawulence App"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

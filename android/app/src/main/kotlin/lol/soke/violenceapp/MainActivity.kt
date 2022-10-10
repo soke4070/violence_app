@@ -1,4 +1,4 @@
-package com.example.violence_app
+package lol.soke.violenceapp
 
 import io.flutter.embedding.android.FlutterActivity
 

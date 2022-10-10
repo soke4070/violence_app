@@ -13,23 +13,25 @@ class VideoPlayerItem extends StatefulWidget {
 }
 
 class _VideoPlayerItemState extends State<VideoPlayerItem> {
-  late VideoPlayerController videoPlayerController;
+  late VideoPlayerController _videoPlayerController;
 
   @override
   void initState() {
     super.initState();
-    videoPlayerController = VideoPlayerController.network(widget.videoUrl)
+    _videoPlayerController = VideoPlayerController.network(widget.videoUrl)
       ..initialize().then((value) {
-        videoPlayerController.play();
-        videoPlayerController.setVolume(1);
-        videoPlayerController.setLooping(true);
+        _videoPlayerController.value.isPlaying;
+        _videoPlayerController.play();
+        _videoPlayerController.setVolume(1);
+        _videoPlayerController.setLooping(true);
+        
       });
   }
 
   @override
   void dispose() {
     super.dispose();
-    videoPlayerController.dispose();
+    _videoPlayerController.dispose();
   }
 
   @override
@@ -42,7 +44,28 @@ class _VideoPlayerItemState extends State<VideoPlayerItem> {
       decoration: const BoxDecoration(
         color: Colors.black,
       ),
-      child: VideoPlayer(videoPlayerController),
+      child: AspectRatio(
+        aspectRatio: _videoPlayerController.value.aspectRatio,
+        child: Stack(
+          children: [
+            VideoPlayer(
+              _videoPlayerController,
+              
+            ),
+            _videoPlayerController.value.isPlaying
+                ? Container()
+                : Center(
+                    child: Icon(
+                      Icons.play_arrow,
+                      size: 1,
+                      color: Colors.white.withOpacity(0.4),
+                    ),
+                  )
+                  
+          ],
+        ),
+      ),
     );
+    
   }
 }
