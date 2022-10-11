@@ -57,7 +57,7 @@ class _ConfirmScreenState extends State<ConfirmScreen> {
             ),
             SizedBox(
               width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height / 1.4,
+              height: MediaQuery.of(context).size.height / 1.5,
               child: VideoPlayer(controller),
             ),
             const SizedBox(

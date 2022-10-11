@@ -35,6 +35,10 @@ class _HomeScreenState extends State<HomeScreen> {
             label: '',
           ),
           BottomNavigationBarItem(
+            icon: Icon(Icons.local_fire_department, size: 35),
+            label: '',
+          ),
+          BottomNavigationBarItem(
             icon: Icon(Icons.travel_explore, size: 30),
             label: '',
           ),

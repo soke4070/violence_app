@@ -10,9 +10,10 @@ import 'package:violence_app/views/screens_auth/video_screen.dart';
 
 List pages = [
 VideoScreen(),
+  const Text('Feeds'),
 SearchScreen(),
  const AddVideoScreen(),
-  const Text('Messages Screen'),
+  const Text('Notification'),
  ProfileScreen(uid: authController.user.uid),
 ];
 

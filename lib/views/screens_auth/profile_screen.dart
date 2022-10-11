@@ -39,7 +39,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             appBar: AppBar(
               backgroundColor: Colors.black,
               leading: const Icon(
-                Icons.person_add_alt_1_outlined,
+                Icons.local_fire_department,
                 color: Colors.white,
               ),
               actions: const [

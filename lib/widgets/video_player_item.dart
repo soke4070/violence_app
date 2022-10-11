@@ -20,11 +20,11 @@ class _VideoPlayerItemState extends State<VideoPlayerItem> {
     super.initState();
     _videoPlayerController = VideoPlayerController.network(widget.videoUrl)
       ..initialize().then((value) {
+        setState(() {});
         _videoPlayerController.value.isPlaying;
         _videoPlayerController.play();
         _videoPlayerController.setVolume(1);
         _videoPlayerController.setLooping(true);
-        
       });
   }
 
@@ -39,33 +39,27 @@ class _VideoPlayerItemState extends State<VideoPlayerItem> {
     final size = MediaQuery.of(context).size;
 
     return Container(
-      width: size.width,
-      height: size.height,
-      decoration: const BoxDecoration(
-        color: Colors.black,
-      ),
-      child: AspectRatio(
-        aspectRatio: _videoPlayerController.value.aspectRatio,
-        child: Stack(
-          children: [
-            VideoPlayer(
-              _videoPlayerController,
-              
-            ),
-            _videoPlayerController.value.isPlaying
-                ? Container()
-                : Center(
-                    child: Icon(
-                      Icons.play_arrow,
-                      size: 1,
-                      color: Colors.white.withOpacity(0.4),
-                    ),
-                  )
-                  
-          ],
+        width: size.width,
+        height: size.height,
+        decoration: const BoxDecoration(
+          color: Colors.black,
         ),
-      ),
-    );
-    
+        child: AspectRatio(
+            aspectRatio: _videoPlayerController.value.aspectRatio,
+            child: Stack(
+              children: <Widget>[
+                SizedBox.expand(
+                  child: FittedBox(
+                    fit: BoxFit.cover,
+                    child: SizedBox(
+                      width: _videoPlayerController.value.aspectRatio,
+                      height: 1,
+                      child: VideoPlayer(_videoPlayerController),
+                    ),
+                  ),
+                ),
+                //FURTHER IMPLEMENTATION
+              ],
+            )));
   }
 }

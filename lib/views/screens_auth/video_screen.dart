@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:video_player/video_player.dart';
 import 'package:get/get.dart';
+import 'package:violence_app/views/screens_auth/add_video_screen.dart';
 
 import '../../controllers/video_controller.dart';
 import '../../widgets/circle_animation.dart';
+import '../../widgets/circle_button.dart';
 import '../../widgets/constants.dart';
 import '../../widgets/video_player_item.dart';
 import 'comment_screen.dart';
@@ -76,6 +79,26 @@ class VideoScreen extends StatelessWidget {
     final size = MediaQuery.of(context).size;
 
     return Scaffold(
+      extendBodyBehindAppBar: true,
+      appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          title: Text("Vawulence🔥",
+              style: GoogleFonts.satisfy(
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white)),
+          actions: [
+            CircleButton(
+              icon: Icons.add_a_photo,
+              iconSize: 30,
+              onPressed: () => Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => AddVideoScreen(),
+                ),
+              ),
+              // ignore: prefer_const_constructors
+            ),
+          ]),
       body: Obx(() {
         return PageView.builder(
           itemCount: videoController.videoList.length,
