@@ -1,6 +1,6 @@
 # violence_app
 
-Green App is a Social App for promoting Peace and Violence
+Vawulence App is a Social App for promoting Peace 
 
 ## Getting Started
 
