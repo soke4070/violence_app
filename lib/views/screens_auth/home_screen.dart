@@ -42,13 +42,7 @@ class _HomeScreenState extends State<HomeScreen> {
             icon: Icon(Icons.travel_explore, size: 30),
             label: '',
           ),
-          BottomNavigationBarItem(
-            icon: ImageIcon(
-              AssetImage('lib/icons/fire.png'),
-              size: 30,
-            ),
-            label: '',
-          ),
+    
           BottomNavigationBarItem(
             icon: Icon(Icons.notifications_active, size: 30),
             label: '',

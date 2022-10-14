@@ -37,6 +37,7 @@ class _ConfirmScreenState extends State<ConfirmScreen> {
     controller.play();
     controller.setVolume(1);
     controller.setLooping(true);
+    
   }
 
   @override
@@ -98,7 +99,8 @@ class _ConfirmScreenState extends State<ConfirmScreen> {
                     onPressed: () => uploadVideoController.uploadVideo(
                         _songController.text,
                         _captionController.text,
-                        widget.videoPath),
+                        widget.videoPath,
+                        ),
                     child: const Text(
                       'Upload',
                       style: TextStyle(

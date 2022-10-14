@@ -42,12 +42,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 Icons.local_fire_department,
                 color: Colors.white,
               ),
-              actions: const [
-                Icon(
-                  Icons.more_horiz,
-                  color: Colors.white,
-                ),
-              ],
               title: Text(
                 controller.user['name'],
                 style: const TextStyle(

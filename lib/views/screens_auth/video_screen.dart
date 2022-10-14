@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:share_plus/share_plus.dart';
 import 'package:video_player/video_player.dart';
 import 'package:get/get.dart';
 import 'package:violence_app/views/screens_auth/add_video_screen.dart';
+import 'package:violence_app/views/screens_auth/feeds_screen.dart';
 
 import '../../controllers/video_controller.dart';
 import '../../widgets/circle_animation.dart';
@@ -233,7 +235,11 @@ class VideoScreen extends StatelessWidget {
                                 Column(
                                   children: [
                                     InkWell(
-                                      onTap: () {},
+                                      onTap: () => Navigator.of(context).push(
+                                        MaterialPageRoute(
+                                          builder: (context) => FeedsScreen(),
+                                        ),
+                                      ),
                                       child: const Icon(
                                         Icons.settings_voice,
                                         size: 40,
@@ -253,9 +259,12 @@ class VideoScreen extends StatelessWidget {
                                 Column(
                                   children: [
                                     InkWell(
-                                      onTap: () {},
+                                      onTap: () async {
+                                        final urlPreview = 'https://play.google.com/store/apps/details?id=com.whatsapp&hl=en&gl=US';
+                                        await Share.share('Download Vawulence App to See this vawlence😂 $urlPreview');
+                                      },
                                       child: const Icon(
-                                        Icons.reply,
+                                        Icons.share,
                                         size: 35,
                                         color: Colors.white,
                                       ),

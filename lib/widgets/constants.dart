@@ -4,17 +4,17 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:violence_app/controllers/auth_controller.dart';
 import 'package:violence_app/views/screens_auth/add_video_screen.dart';
+import 'package:violence_app/views/screens_auth/feeds_screen.dart';
 import 'package:violence_app/views/screens_auth/profile_screen.dart';
 import 'package:violence_app/views/screens_auth/search_screen.dart';
 import 'package:violence_app/views/screens_auth/video_screen.dart';
 
 List pages = [
-VideoScreen(),
-  const Text('Feeds'),
-SearchScreen(),
- const AddVideoScreen(),
-  const Text('Notification'),
- ProfileScreen(uid: authController.user.uid),
+  VideoScreen(),
+  FeedsScreen(),
+  SearchScreen(),
+  FeedsScreen(),
+  ProfileScreen(uid: authController.user.uid),
 ];
 
 // COLORS

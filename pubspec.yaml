@@ -61,6 +61,13 @@ dependencies:
   flutter_shimmer: ^2.1.2
   line_icons: ^2.0.1
   flutter_hex_color: ^2.0.0
+  share_plus: ^4.5.3
+  path_provider: ^2.0.11
+  http: ^0.13.5
+  audioplayers: ^1.1.1
+  flutter_audio_recorder2: ^0.0.2
+  local_auth: ^2.1.2
+  record_mp3: ^3.0.0
 
 dev_dependencies:
   flutter_test:
