@@ -6,6 +6,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:violence_app/models/user.dart' as model;
 import 'package:violence_app/views/screens_auth/home_screen.dart';
 import 'package:violence_app/views/screens_auth/login_page.dart';
+import 'package:violence_app/widgets/splash_page.dart';
 import '../widgets/constants.dart';
 
 class AuthController extends GetxController {
@@ -26,7 +27,7 @@ class AuthController extends GetxController {
 
   _setInitialScreen(User? user) {
     if (user == null) {
-      Get.offAll(() => LoginPage());
+      Get.offAll(() => SplashPage(duration: 2, goToPage: WelcomePage(),));
     } else {
       Get.offAll(() => const HomeScreen());
     }

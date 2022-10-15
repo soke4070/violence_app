@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:violence_app/controllers/auth_controller.dart';
 
 import 'package:violence_app/views/screens_auth/login_page.dart';
+import 'package:violence_app/widgets/splash_page.dart';
 
 
 void main() async {
@@ -28,7 +29,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           scaffoldBackgroundColor: Colors.black,
           colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.grey)),
-      home: LoginPage(),
+      home: SplashPage(duration: 2, goToPage: WelcomePage(),)
     );
   }
 }
+
