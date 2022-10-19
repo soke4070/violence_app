@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:share_plus/share_plus.dart';
-import 'package:video_player/video_player.dart';
 import 'package:get/get.dart';
 import 'package:violence_app/views/screens_auth/add_video_screen.dart';
 import 'package:violence_app/views/screens_auth/feeds_screen.dart';

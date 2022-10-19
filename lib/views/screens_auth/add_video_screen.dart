@@ -1,8 +1,11 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:violence_app/views/screens_auth/registration_page.dart';
 import '../../widgets/constants.dart';
 import 'confirm_screen.dart';
+import 'package:violence_app/widgets/themebbutton.dart';
 
 class AddVideoScreen extends StatelessWidget {
   const AddVideoScreen({Key? key}) : super(key: key);
@@ -76,29 +79,72 @@ class AddVideoScreen extends StatelessWidget {
     );
   }
 
-  @override
+
+@override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: InkWell(
-          onTap: () => showOptionsDialog(context),
-          child: Container(
-            width: 190,
-            height: 50,
-            decoration: BoxDecoration(color: buttonColor),
-            child: const Center(
-              child: Text(
-                'Add Video',
-                style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
+        body: Container(
+      color: Colors.black,
+      child: Stack(
+        children: [
+          Positioned.fill(
+            child: Opacity(
+              opacity: 1,
+              child: Image.asset('assets/peace1.png', fit: BoxFit.cover),
             ),
           ),
-        ),
-      ),
-    );
+          Center(
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                Center(
+                  child: ClipOval(
+                    child: ImageIcon(
+                      AssetImage('lib/icons/danger.png'),
+                      size: 20,
+                      color: Colors.transparent,
+                    ),
+                  ),
+                ),
+                SizedBox(height: 100),
+                Text('Upload Vawulence',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 40,
+                        fontWeight: FontWeight.bold)),
+                SizedBox(height: 40),
+                Text('Mix this Vawulence with Fearless',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(color: Colors.red, fontSize: 20)),
+                SizedBox(height: 50),
+                ThemeButton(
+                 
+                  label: 'CLICK HERE IF YOU CHOOSE PEACE !',
+            
+                  highlight: Colors.red[900],
+                  color: Colors.black,
+                  onClick: () {
+                    SystemChannels.platform.invokeMethod('SystemNavigator.pop');
+                  },
+                ),
+                ThemeButton(
+                         icon: const Icon(Icons.add_a_photo, color: Colors.white,),
+                  label: 'UPLOAD VAWULENCE',
+                      
+                  highlight: Colors.red[900],
+                  color: Colors.black,
+                  borderColor: Colors.white,
+                  onClick: () => showOptionsDialog(context),
+                  ),
+                
+                  ]
+                  ),
+                )
+              ]))
+        ,
+      );
+    
   }
 }

@@ -205,7 +205,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             itemCount: controller.user['thumbnails'].length,
                             gridDelegate:
                                 const SliverGridDelegateWithFixedCrossAxisCount(
-                              crossAxisCount: 3,
+                              crossAxisCount: 4,
                               childAspectRatio: 1,
                               crossAxisSpacing: 5,
                             ),
