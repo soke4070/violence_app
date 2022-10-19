@@ -6,12 +6,15 @@ class TextInputField extends StatelessWidget {
   final String labelText;
   final bool isObscure;
   final IconData icon;
+  final Color color;
+  final  Color  labelColor;
   const TextInputField({
     Key? key,
     required this.controller,
     required this.labelText,
     this.isObscure = false,
-    required this.icon, required Color color,
+    required this.icon, 
+    required this.color, required this.labelColor,
   }) : super(key: key);
 
   @override
@@ -19,10 +22,13 @@ class TextInputField extends StatelessWidget {
     return TextField(
       controller: controller,
       decoration: InputDecoration(
-        labelText: labelText,
-        prefixIcon: Icon(icon),
+        labelText: labelText, 
+    
+        prefixIcon: Icon(icon, color: Colors.white,),
+     
         labelStyle: const TextStyle(
-          fontSize: 20,
+          fontSize: 15,
+          color: Colors.white,
         ),
         enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(5),
@@ -35,7 +41,7 @@ class TextInputField extends StatelessWidget {
               color: borderColor,
             )),
       ),
-      obscureText: isObscure,
+      obscureText: false,
     );
   }
 }

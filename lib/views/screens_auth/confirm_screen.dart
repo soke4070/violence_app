@@ -49,7 +49,7 @@ class _ConfirmScreenState extends State<ConfirmScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.transparent,
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -76,6 +76,7 @@ class _ConfirmScreenState extends State<ConfirmScreen> {
                       color: Colors.white,
                       controller: _songController,
                       labelText: 'Sound Name',
+                         labelColor: Colors.white,
                       icon: Icons.music_note,
                     ),
                   ),
@@ -85,10 +86,15 @@ class _ConfirmScreenState extends State<ConfirmScreen> {
                   Container(
                     margin: const EdgeInsets.symmetric(horizontal: 10),
                     width: MediaQuery.of(context).size.width - 20,
+                  
                     child: TextInputField(
+                 
                       color: Colors.white,
                       controller: _captionController,
                       labelText: 'Caption',
+                      labelColor: Colors.white,
+                    
+                    
                       icon: Icons.closed_caption,
                     ),
                   ),

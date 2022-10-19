@@ -37,7 +37,7 @@ class AddVideoScreen extends StatelessWidget {
                 Padding(
                   padding: EdgeInsets.all(7.0),
                   child: Text(
-                    'Gallery',
+                    'Gallery', selectionColor: Colors.green,
                     style: TextStyle(fontSize: 20),
                   ),
                 ),
@@ -117,7 +117,7 @@ class AddVideoScreen extends StatelessWidget {
                 SizedBox(height: 40),
                 Text('Mix this Vawulence with Fearless',
                     textAlign: TextAlign.center,
-                    style: TextStyle(color: Colors.red, fontSize: 20)),
+                    style: TextStyle(color: Colors.green, fontSize: 20)),
                 SizedBox(height: 50),
                 ThemeButton(
                  

@@ -1,4 +1,6 @@
 
+// ignore_for_file: prefer_const_constructors
+
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -27,8 +29,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Violence App',
       theme: ThemeData(
-          scaffoldBackgroundColor: Colors.black,
-          colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.grey)),
+          scaffoldBackgroundColor: Colors.black, textTheme: TextTheme(subtitle1:  TextStyle(color: Colors.white)),
+       ),
       home: SplashPage(duration: 2, goToPage: WelcomePage(),)
     );
   }

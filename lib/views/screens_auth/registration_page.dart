@@ -22,8 +22,8 @@ class _RegistrationPageState extends State<RegistrationPage> {
   final TextEditingController _usernameController = TextEditingController();
 
   final _formKey = GlobalKey<FormState>();
-  bool checkedValue = false;
-  bool checkboxValue = false;
+  bool checkedValue = true;
+  bool checkboxValue = true;
 
   @override
   Widget build(BuildContext context) {
@@ -108,6 +108,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                             controller: _usernameController,
                             decoration: ThemeHelper().textInputDecoration(
                                 'User Name', 'Enter your username'),
+                                  style: TextStyle(color: Colors.black),
                             validator: (val) {
                               if (val!.isEmpty) {
                                 return "Enter a username";
@@ -123,6 +124,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                             controller: _emailController,
                             decoration: ThemeHelper().textInputDecoration(
                                 "E-mail address", "Enter your email"),
+                                  style: TextStyle(color: Colors.black),
                             keyboardType: TextInputType.emailAddress,
                             validator: (val) {
                               if (val!.isEmpty) {
@@ -140,6 +142,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                             obscureText: true,
                             decoration: ThemeHelper().textInputDecoration(
                                 "Password*", "Enter your password"),
+                                  style: TextStyle(color: Colors.black),
                             validator: (val) {
                               if (val!.isEmpty) {
                                 return "Please enter your password";
@@ -165,6 +168,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                                         }),
                                     Text(
                                       "I accept all terms and conditions.",
+                                      
                                       style: TextStyle(color: Colors.white),
                                     ),
                                   ],
@@ -175,7 +179,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                                     state.errorText ?? '',
                                     textAlign: TextAlign.left,
                                     style: TextStyle(
-                                      color: Colors.white,
+                                      color: Colors.black,
                                       fontSize: 12,
                                     ),
                                   ),

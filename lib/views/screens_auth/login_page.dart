@@ -59,6 +59,7 @@ class _LoginPageState extends State<LoginPage> {
                                   controller: _emailController,
                                   decoration: ThemeHelper().textInputDecoration(
                                       'Email', 'Enter your email address'),
+                                       style: TextStyle(color: Colors.black),
                                 ),
                                 decoration:
                                     ThemeHelper().inputBoxDecorationShaddow(),
@@ -70,6 +71,7 @@ class _LoginPageState extends State<LoginPage> {
                                   obscureText: true,
                                   decoration: ThemeHelper().textInputDecoration(
                                       'Password', 'Enter your password'),
+                                       style: TextStyle(color: Colors.black),
                                 ),
                                 decoration:
                                     ThemeHelper().inputBoxDecorationShaddow(),

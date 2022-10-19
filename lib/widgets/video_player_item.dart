@@ -22,8 +22,10 @@ class _VideoPlayerItemState extends State<VideoPlayerItem> {
       ..initialize().then((value) {
         setState(() {});
         _videoPlayerController.value.isPlaying;
+   
         _videoPlayerController.play();
-        _videoPlayerController.setVolume(1);
+                   _videoPlayerController.pause();
+        _videoPlayerController.setVolume(100);
         _videoPlayerController.setLooping(true);
       });
   }
