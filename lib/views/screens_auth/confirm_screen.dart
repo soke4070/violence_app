@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -21,11 +23,16 @@ class ConfirmScreen extends StatefulWidget {
 
 class _ConfirmScreenState extends State<ConfirmScreen> {
   late VideoPlayerController controller;
+    var submitted = false;
   TextEditingController _songController = TextEditingController();
   TextEditingController _captionController = TextEditingController();
 
+  
+
   UploadVideoController uploadVideoController =
       Get.put(UploadVideoController());
+      
+      
 
   @override
   void initState() {
@@ -39,6 +46,7 @@ class _ConfirmScreenState extends State<ConfirmScreen> {
     controller.setLooping(true);
     
   }
+  
 
   @override
   void dispose() {
@@ -107,20 +115,36 @@ class _ConfirmScreenState extends State<ConfirmScreen> {
                         _captionController.text,
                         widget.videoPath,
                         ),
-                    child: const Text(
+                  
+                    child:
+                            submitted ? SizedBox (
+                            height: 15,
+                            width: 15,
+                            child: CircularProgressIndicator(
+                              
+                              strokeWidth: 2,
+                              valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+                            ),
+                            )
+                     : Text(
                       'Upload',
                       style: TextStyle(
                         fontSize: 20,
                         color: Colors.white,
                       ),
                     ),
+                  ),
+                 
+                ]
                   )
+            )
                 ],
               ),
             )
-          ],
-        ),
-      ),
     );
+          
+        
+      
+    
   }
 }
