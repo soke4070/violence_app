@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      debugShowCheckedModeBanner: 4321``,
+      debugShowCheckedModeBanner: false,
       title: 'Violence App',
       theme: ThemeData(
           scaffoldBackgroundColor: Colors.black, textTheme: TextTheme(subtitle1:  TextStyle(color: Colors.white)),
