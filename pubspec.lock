@@ -681,13 +681,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "6.0.3"
-  record_mp3:
-    dependency: "direct main"
-    description:
-      name: record_mp3
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "3.0.0"
   riverpod:
     dependency: transitive
     description:
